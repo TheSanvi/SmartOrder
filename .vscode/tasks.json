@@ -1,0 +1,33 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "process",
+            "label": "Build SmartOrder",
+            "command": "C:/msys64/ucrt64/bin/g++.exe",
+            "args": [
+                "-std=c++14",
+                "-g",
+                "-I${workspaceFolder}/include",
+                "${workspaceFolder}/src/main.cpp",
+                "${workspaceFolder}/src/Exchange.cpp",
+                "${workspaceFolder}/src/OrderProcessor.cpp",
+                "${workspaceFolder}/src/RiskManager.cpp",
+                "${workspaceFolder}/src/SmartRouter.cpp",
+                "-o",
+                "${workspaceFolder}/SmartOrder.exe"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Build SmartOrder with MSYS2 UCRT64 g++"
+        }
+    ]
+}
